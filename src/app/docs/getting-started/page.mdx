@@ -1,0 +1,37 @@
+export const metadata = { title: "Getting started" }
+
+# Getting started
+
+This repository contains the Feyo web application and its documentation foundation. The project is intentionally early-stage: the current working surface is the Next.js application and its docs.
+
+## Prerequisites
+
+- Node.js 20 or newer
+- npm
+- Git
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. The documentation is available at `/docs`.
+
+## Useful checks
+
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+npm audit --omit=dev
+```
+
+## Repository shape
+
+The app uses the Next.js App Router. Documentation pages live beside the app at `src/app/docs/**/page.mdx`, the shared MDX component mapping is in `src/mdx-components.tsx`, and the docs navigation is in `src/app/docs/DocsLayout.tsx`.
+
+## Important boundary
+
+Do not add live payouts, custody of user private keys, or claims about unimplemented API/MCP behavior without a reviewed implementation and tests. Read [Contributing](/docs/contributing) before opening a change.

@@ -1,0 +1,19 @@
+export const metadata = { title: "MCP server" }
+
+# MCP server
+
+Feyo plans to expose carefully scoped payment workflows through an MCP server so AI agents can work with payment intents without receiving unrestricted access to funds.
+
+## Planned tool categories
+
+- Create or inspect a payment intent.
+- Request authorization within a configured policy.
+- Check a payment's verification status.
+
+The exact tool names, schemas, transport, and authentication model are not final.
+
+## Permission first
+
+An agent should be able to explain what it is asking to do before any value moves. Tool design will therefore separate proposing a payment from authorizing and executing it, with auditable inputs and outputs.
+
+> No Feyo MCP server or payment tool is currently exposed by this repository. This page documents direction only.

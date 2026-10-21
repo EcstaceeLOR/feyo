@@ -1,0 +1,23 @@
+export const metadata = { title: "Stellar" }
+
+# Stellar
+
+Stellar is the planned settlement network for Feyo. Its low-cost, fast transactions and stablecoin ecosystem make it a strong fit for payment infrastructure, while the application still needs careful handling of authorization, assets, fees, and network configuration.
+
+## Planned transaction lifecycle
+
+Feyo will model a payment from intent to verification:
+
+- identify the asset, issuer, network, and destination;
+- validate the authorized amount and recipient;
+- construct and sign through an explicitly controlled wallet boundary;
+- submit the transaction to Stellar infrastructure;
+- verify the resulting transaction and expose its status.
+
+## Current status
+
+The repository includes Stellar SDK dependencies for future integration, but this documentation task does not implement or claim real Stellar payment transactions. No private keys are stored or managed by the application as part of this foundation.
+
+## Safety notes
+
+Network, asset issuer, destination, and amount must be treated as security-sensitive inputs. Any future integration needs test coverage for malformed addresses, wrong-network assets, authorization scope, duplicate requests, and failed or pending transactions.

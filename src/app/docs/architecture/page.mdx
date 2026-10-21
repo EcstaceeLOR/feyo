@@ -1,0 +1,29 @@
+export const metadata = { title: "Architecture" }
+
+# Architecture
+
+Feyo is designed as a set of explicit boundaries around a payment intent. A request should be understandable before it is authorized, and its final state should be verifiable after submission.
+
+## Intended flow
+
+1. A product or agent creates a payment intent.
+2. A permission policy checks what the caller may request.
+3. An authorized executor prepares and submits a Stellar transaction.
+4. A verifier observes the network and records a transaction status.
+5. The caller receives a status it can inspect rather than an opaque success flag.
+
+## System boundaries
+
+| Boundary | Purpose | Current status |
+| --- | --- | --- |
+| Web application | Human-facing payment and status experience | Work in progress |
+| Developer API | Programmatic payment intents and status queries | Planned |
+| MCP server | Agent-facing tools with explicit permissions | Planned |
+| Stellar integration | Transaction construction and verification | Planned |
+| Regulated payout providers | USDC-to-Nigerian-bank settlement | Planned |
+
+## Trust model
+
+Feyo should not need to hold a user's private key to coordinate a payment. Authorization, signing, provider access, and verification must remain separable so that each can be reviewed and replaced independently.
+
+This page describes the target architecture, not a claim that those components are already running in production.
