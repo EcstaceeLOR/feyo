@@ -8,8 +8,19 @@ Thanks for helping build open payment infrastructure. Feyo is early-stage, so cl
 2. Install dependencies with `npm install`.
 3. Run the app with `npm run dev`.
 4. Make the smallest change that solves the problem.
-5. Run lint, type checking, build, and `git diff --check`.
+5. Run lint, docs link checks, tests, type checking, build, and `git diff --check`.
 6. Open a pull request using the template.
+
+### Verification commands
+
+```bash
+npm run lint          # Run ESLint across application and tests
+npm run docs:check    # Validate internal MDX links, routes, and fragment anchors
+npm test              # Run unit and component test suite
+npx tsc --noEmit      # Type-check TypeScript files
+npm run build         # Build production Next.js application
+git diff --check      # Check for whitespace and merge conflict markers
+```
 
 ## Scope and safety
 
