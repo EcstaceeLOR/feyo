@@ -17,6 +17,8 @@ Visit `http://localhost:3000` and the [documentation](http://localhost:3000/docs
 
 ```bash
 npm run lint
+npm run docs:check
+npm test
 npx tsc --noEmit
 npm run build
 npm audit --omit=dev
