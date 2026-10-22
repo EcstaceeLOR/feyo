@@ -51,7 +51,7 @@ test("search is case-insensitive, token-aware, capped and has an empty state", (
   assert.equal(searchDocs(docs, "").length, 0);
   assert.equal(searchDocs(docs, "     ").length, 0);
   assert.deepEqual(searchDocs(docs, "unfindable-nonsense-zzzz"), []);
-  assert.ok(searchDocs(docs, "  StElLaR   SaFeTy ").length >= 0);
+  assert.ok(searchDocs(docs, "  StElLaR ").some((entry) => entry.href === "/docs/stellar"));
   assert.ok(searchDocs(docs, "payment", 3).length <= 3);
   assert.deepEqual(searchDocs(docs, "stellar", 0), []);
 });
