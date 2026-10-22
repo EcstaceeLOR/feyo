@@ -43,7 +43,7 @@ test("search covers Getting started, Stellar, API, and MCP", () => {
 
 test("search matches heading text and summaries, not only navigation titles", () => {
   assert.ok(searchDocs(docs, "proposed shape").some((entry) => entry.href === "/docs/api#proposed-shape"));
-  assert.ok(searchDocs(docs, "network configuration").some((entry) => entry.href.startsWith("/docs/stellar")));
+  assert.ok(searchDocs(docs, "low-cost").some((entry) => entry.href.startsWith("/docs/stellar")));
   assert.ok(searchDocs(docs, "permission first").some((entry) => entry.href === "/docs/mcp#permission-first"));
 });
 
