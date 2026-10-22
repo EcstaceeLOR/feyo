@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   },
   description:
     "Open-source Stellar payment infrastructure for web apps, developer APIs, and AI agents.",
+  openGraph: {
+    title: "Feyo — Stellar payment infrastructure",
+    description:
+      "An open-source, Stellar-powered foundation for stablecoin payments and programmable financial infrastructure.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
