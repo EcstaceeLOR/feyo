@@ -1,0 +1,18 @@
+.payment-status { width: 100%; min-width: 0; padding: clamp(1rem, 3vw, 1.75rem); border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--foreground); overflow-wrap: anywhere; }
+.payment-status h2 { margin: 0 0 1.25rem; font-size: 1.1rem; }
+.payment-status p { line-height: 1.6; }
+.payment-status-label { font-size: 1.3rem; font-weight: 750; margin-bottom: .5rem; }
+.payment-status-notice { padding: .75rem; border: 1px solid currentColor; border-radius: 8px; }
+.payment-status-network, .payment-status-note { color: var(--muted); font-size: .875rem; }
+.payment-status-timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .75rem; padding: 0; list-style: none; }
+.payment-status-timeline li { display: flex; gap: .6rem; align-items: flex-start; padding: .75rem; border: 1px solid var(--line); border-radius: 8px; }
+.payment-status-timeline li[aria-current="step"] { border: 2px solid currentColor; font-weight: 700; }
+.payment-status-timeline small { display: block; margin-top: .4rem; font-size: .75rem; font-weight: 400; }
+.payment-status-icon { flex-shrink: 0; }
+.payment-status a { text-decoration: underline; text-underline-offset: 3px; }
+.payment-status button { min-height: 44px; padding: .6rem 1rem; background: var(--foreground); color: var(--panel); border: 2px solid transparent; border-radius: 8px; font: inherit; cursor: pointer; }
+.payment-status button:disabled { cursor: wait; opacity: .65; }
+.payment-status :is(a, button):focus-visible { outline: 3px solid var(--foreground); outline-offset: 4px; }
+@media (max-width: 800px) { .payment-status-timeline { grid-template-columns: 1fr; } }
+/* Static indicators also avoid suggesting that polling is running. */
+@media (prefers-reduced-motion: reduce) { .payment-status *, .payment-status *::before, .payment-status *::after { animation: none; transition: none; scroll-behavior: auto; } }

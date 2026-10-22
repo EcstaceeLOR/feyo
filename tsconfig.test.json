@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": ".test-build",
+    "noEmit": false,
+    "incremental": false,
+    "plugins": []
+  },
+  "include": ["src/components/payment/**/*.ts", "src/components/payment/**/*.tsx", "tests/**/*.tsx"],
+  "exclude": ["node_modules", ".test-build"]
+}
