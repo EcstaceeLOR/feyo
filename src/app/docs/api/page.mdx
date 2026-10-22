@@ -1,0 +1,26 @@
+export const metadata = { title: "Developer API" }
+
+# Developer API
+
+The Feyo developer API is a planned interface for applications that need to create payment intents and read their verifiable status.
+
+## Proposed shape
+
+The API is expected to center on resources such as:
+
+| Resource | Purpose | Status |
+| --- | --- | --- |
+| Payment intent | Declare who should receive what and why | Planned |
+| Permission | Limit what a caller or agent may request | Planned |
+| Payment status | Report lifecycle and verification details | Planned |
+
+The final authentication, idempotency, error model, and versioning contract have not been published.
+
+> There are no public Feyo payment API endpoints to call yet. Examples on this page are conceptual and must not be treated as working curl commands.
+
+## Design principles
+
+- Make authorization explicit and inspectable.
+- Make retries safe with idempotency.
+- Return useful pending and failure states.
+- Keep transaction identifiers and verification evidence available to callers.

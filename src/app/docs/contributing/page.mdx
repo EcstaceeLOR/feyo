@@ -1,0 +1,28 @@
+export const metadata = { title: "Contributing" }
+
+# Contributing
+
+Feyo is an independent startup and open-source project. Small, well-scoped changes are welcome while the architecture is still taking shape.
+
+## Before you start
+
+Read the repository [CONTRIBUTING.md](https://github.com/Feyo-Protocol/feyo/blob/main/CONTRIBUTING.md), [SECURITY.md](https://github.com/Feyo-Protocol/feyo/blob/main/SECURITY.md), and [Code of Conduct](https://github.com/Feyo-Protocol/feyo/blob/main/CODE_OF_CONDUCT.md).
+
+## A good pull request
+
+- explains the user or maintainer problem;
+- keeps implementation and documentation status accurate;
+- includes tests or verification for behavior changes;
+- avoids unrelated formatting churn;
+- calls out security, custody, or provider implications.
+
+Run the project checks before opening a pull request:
+
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+git diff --check
+```
+
+For payment-related work, do not use real funds or private keys in development. Prefer fixtures, mocks, and test networks as the relevant implementation becomes available.
